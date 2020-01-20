@@ -70,15 +70,16 @@ class explorative analysis.py
 
 Input dataframe, object list, a list of columns we would like to explore and correlation coefficient.
 其中有function：
-1.convert dtypes把dtypes从object变为float或者0/1的boolean
-2.check missing返回missing values概况和处理方式。如果最大null值超过数据大小的0.05倍，则删除null值；
+
+1. convert dtypes把dtypes从object变为float或者0/1的boolean 
+2. check missing返回missing values概况和处理方式。如果最大null值超过数据大小的0.05倍，则删除null值；
 反之用均值或者众数填补。整列全为null值的特征栏直接删除
-3.correlation_matrix返回correlation matrix
-4.check_correlation返回input的columns与其他特征的相关值>coefficient值的排列。
+3. correlation_matrix返回correlation matrix
+4. check_correlation返回input的columns与其他特征的相关值>coefficient值的排列。
 5. plot_df_correlation_full返回所有特征列的correlation画图。
 6. plot_df_correlaiton_use返回不全为同一个值的特征列（即variance不等于0）的correlation画图。
 7. plot_columns_freq返回input的columns的frequency图。
-8.plot_columns_dist返回input的columns的根据时间上的轨迹图。
+8. plot_columns_dist返回input的columns的根据时间上的轨迹图。
 9. column_describe返回input的columns的概况。
 
 
