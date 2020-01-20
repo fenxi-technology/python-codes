@@ -2,6 +2,7 @@
 Some general functions&amp;LSTM model
 
 
+
 Main_LSTM.py
 
 LSTM的类，过程分为scale-feature selection-split data-train LSTM model-test model-inverse scale-plot。
@@ -41,6 +42,7 @@ FIND PERIOD.py
 
 
 find_window_size.py
+
 在这个函数里首先进行时间转换；其次写了一个函数选取自方差大于threshold值（可选，目前使用0.4）的列作为possible
 feature columns（首轮筛选）。这个函数同样也用在class_moving_series种，即选取用来创建移动值的特征列。
 接下来后函数使用之前创建的class_moving_series类和class_time_features类创建了时间特征和基于windows的
@@ -56,6 +58,7 @@ feature columns（首轮筛选）。这个函数同样也用在class_moving_seri
 
 
 influxdb.py
+
 连接Python和influxdb。实现的功能有：把数据传入influxdb，influxdb取数据，查询数据，把influxdb里的数据
 格式改成python数据分析需要的数据格式。
 其中query可以输入指令对influxdb的数据进行查询，query_df返回查询后的dataframe，query_all_df返回查询后的measurement
@@ -64,6 +67,7 @@ influxdb_df_to_python_df_update返回python数据分析需要的数据格式。
 
 
 class explorative analysis.py
+
 Input dataframe, object list, a list of columns we would like to explore and correlation coefficient.
 其中有function：
 1.convert dtypes把dtypes从object变为float或者0/1的boolean
@@ -79,6 +83,7 @@ Input dataframe, object list, a list of columns we would like to explore and cor
 
 
 correlation between.py
+
 input表格名，目标列，和coefficient。
 返回表格中的目标列和其他所有表格（不包括电表）的大于coefficient的相关值。
 
